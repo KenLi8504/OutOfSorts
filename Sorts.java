@@ -17,10 +17,10 @@ public  class Sorts{
     }
   }
 
-  public static void selectionSort(int [] data){
+  public static void SelectionSort(int [] data){
     for (int i = 0; i < data.length;i++){
       int UnsortedMinimum = data[i];
-      int IndexOfMin = 0;
+      int IndexOfMin = i;
       for (int j = i; j < data.length;j++){
         if (data[j] < UnsortedMinimum){
           UnsortedMinimum = data[j];
@@ -28,9 +28,10 @@ public  class Sorts{
         }
       }
       int placeholder = data[i];
-      data[i] = IndexOfMin;
+      data[i] = UnsortedMinimum;
       data[IndexOfMin] = placeholder;
     }
+    System.out.println(Arrays.toString(data));
   }
 
   public static void insertionSort(int [] data){
