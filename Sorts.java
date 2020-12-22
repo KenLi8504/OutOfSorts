@@ -34,17 +34,14 @@ public  class Sorts{
   }
 
   public static void insertionSort(int [] data){
-    for (int i = 0; i <data.length; i++){
-      int CurrentNumber /*to be sorted*/ = data[i];
-      int currentIndex = i;
-      for (int j = i - 1; j >= 0;){
-        if (data[j] > CurrentNumber){
+      for (int i = 1; i < data.length; i++){
+        int CurrentNumber = data[i];
+        int j = i - 1;
+        while(j >= 0 && data[j] >= CurrentNumber){
           data[j+1] = data[j];
+          j--;
         }
-        else{
-          data[j] = CurrentNumber;
-        }
+        data[j+1] = CurrentNumber;
       }
     }
-  }
 }
