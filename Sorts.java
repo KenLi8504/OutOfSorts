@@ -17,7 +17,7 @@ public  class Sorts{
     }
   }
 
-  public static void SelectionSort(int [] data){
+  public static void selectionSort(int [] data){
     for (int i = 0; i < data.length;i++){
       int UnsortedMinimum = data[i];
       int IndexOfMin = i;
