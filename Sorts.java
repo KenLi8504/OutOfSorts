@@ -31,10 +31,20 @@ public  class Sorts{
       data[i] = UnsortedMinimum;
       data[IndexOfMin] = placeholder;
     }
-    System.out.println(Arrays.toString(data));
   }
 
   public static void insertionSort(int [] data){
-
+    for (int i = 0; i <data.length; i++){
+      int CurrentNumber /*to be sorted*/ = data[i];
+      int currentIndex = i;
+      for (int j = i - 1; j >= 0;){
+        if (data[j] > CurrentNumber){
+          data[j+1] = data[j];
+        }
+        else{
+          data[j] = CurrentNumber;
+        }
+      }
+    }
   }
 }
